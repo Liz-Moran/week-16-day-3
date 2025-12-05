@@ -10,17 +10,32 @@
     # restricted = {"glass bottles", "weapons", "alcohol", "alcohol"}
     # attendance = [120, 130, 125, 145, 150, 148, 155, 160, 158, 162]
 
+foods = ["pizza", "tacos", "bbq", "tacos", "sushi", "corn", "bbq", "ice cream"]   #List
+stages = ("Main Stage", "Hip-Hop Zone", "Jazz Corner", "Indie Alley")   #Tuple
+restricted = {"glass bottles", "weapons", "alcohol", "alcohol"}       #Set
+attendance = [120, 130, 125, 145, 150, 148, 155, 160, 158, 162]      #List
+
+
 # Task 1 — Clean the Food Vendor List
     # 1. Remove duplicates while keeping only the first occurrence.
     # 2. Add "ramen" and "fried rice".
     # 3. Insert "smoothies" at index 2.
     # 4. Sort the list alphabetically.
     # 5. Print the final vendor list.
+foods=list(dict.fromkeys(foods))
+foods.insert(9,'ramen')
+foods.insert(-1,'fried rice')
+foods.insert(2, 'smoothies')
+print("-------------------")
+print("Vendors")
+print("-------------------")
 
 #Task 1.5 
     # combine all the list into a nested list called festival_data
     #print out the new nested list(use a for loop to print each item on a new line)
-
+festival_data = foods
+for food in festival_data:
+    print(food)
 
 # Task 2 — Stage Map
     # 1. Print the second stage.
@@ -28,8 +43,10 @@
     # 3. Convert the tuple into a list and add "Rock Arena".
     # 4. Convert it back into a tuple.
     # 5. Print the updated tuple.
-
-
+print("-------------------")
+print("Stages")
+print("-------------------")
+print(stages[1])
 # Task 3 — Restricted Items
     # 1. Add "fireworks".
     # 2. Try adding "weapons" again.
@@ -37,6 +54,9 @@
     # 4. Check if "glass bottles" is still restricted.
     # 5. Print the final restricted set.
 
+print("-------------------")
+print("Restricted Items")
+print("-------------------")
 
 # Task 4 — Attendance Analysis
     # 1. Print the first three hours.
@@ -55,3 +75,9 @@
 
 # Extension
 # Write a function festival_search(item) that returns True/False if item appears in festival_data.
+
+
+
+
+
+
